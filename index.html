@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="Body">
+    <h1 class="heading">This is for the special person 💗</h1>
+    <div class="para">
+        <p class="p1">Happy New Year! 🎉✨</p>
+        <p class="p">May this year bring you happiness, good health, and success in everything you do. Thank you for being such a wonderful G-friend—wishing you many smiles and great memories ahead.</p></div>
+    <div class="hearts">
+  <span>💗</span>
+  <span>💕</span>
+  <span>💖</span>
+  <span>💕</span>
+</div>
+<div id="confetti-container"></div>
+
+<button class="btn-3d" onclick="showMsg()">Touch Me 🥰</button>
+<div id="message">🎉 Happy new year Bangaram ❤️, welcome to 2026 🎉
+  <p></p> </div>
+
+<script>
+  function showMsg() {
+    document.getElementById("message").classList.add("show");
+    launchConfetti();
+  }
+
+  function launchConfetti() {
+    const container = document.getElementById("confetti-container");
+
+    for (let i = 0; i < 30; i++) {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.innerHTML = "🎉";
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.animationDuration = 2 + Math.random() * 2 + "s";
+
+      container.appendChild(confetti);
+
+      setTimeout(() => confetti.remove(), 3000);
+    }
+  }
+</script>
+<div class="hearts"></div>
+
+<script src="hearts.js"></script>
+<div class="burst-hearts"></div>
+
+</body>
+</html>
