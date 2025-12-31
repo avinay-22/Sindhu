@@ -63,6 +63,19 @@ function showMsg() {
     msg.style.display = "inline-block";
     createHeartBurst();
 }
+function showMsg() {
+    const msg = document.getElementById("message");
+    msg.style.display = "inline-block";
+
+    const music = document.getElementById("bgMusic");
+    if (music && music.paused) {
+        music.volume = 0.4;
+        music.play();
+    }
+
+    createHeartBurst();
+}
+
 
 
 
